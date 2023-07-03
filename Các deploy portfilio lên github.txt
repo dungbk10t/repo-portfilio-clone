@@ -1,0 +1,46 @@
+Các deploy lên github.io
+Thông tin repo mẫu ở đây. Nếu bí quá có thể clone lại:
+https://github.com/ashutosh1919/masterPortfolio
+
+cd vào thư mục chính
+
+1. Create a GitHub repository with the name <your-github-username>.github.io
+VD: dungbk10t-portfilio.github.io
+
+2. Generate a production build by running the following command:
+Command: npm run build
+
+3. Enter the build folder using the command:
+Command: cd build
+
+4. Initialize a Git repository within the build folder:
+Command: git init
+
+5. Add the remote repository URL:
+Command: git remote add origin https://github.com/<your-github-username>/<your-github-username>.github.io.git`
+VD: git remote add origin https://github.com/dungbk10t/dungbk10t-portfilio.github.io
+
+
+6. Commit your changes:
+Command: git add . (to stage all changes)
+git commit -m "feat: Deploy portfilio to github.io"
+
+7. Push the generated code to the master branch of your new repository:
+Command: git push origin master --force
+
+Sau đó B2: Deploy tại github.
+1. Tại repo của mình -> Setting -> Page -> Chon branch mà mình push (Cứ để mặc định là main)
+
+Nhấn Save -> Quay lại repo check dấu chấm màu nâu là nó đang deploy. Deploy xong vào trang web doamin githib io của nó để check.
+
+Các Re-deploy: Mục đích: Mình muốn chính sửa portfilio các thông tin gì mới mà muốn tran web cập nhật.
+
+1. Clone lại ropo (portfilio về không phải repo deploy html (phần build mà mình đẩy lên))
+2. Sửa code để sửa thông tin.
+3. npm run build 
+4. đẩy code ở folder build đó (thuộc portfilio clone) -> repo dungbk10t-portfilio.github.io
++ git add .
++ git commit -m ""
++ git push origin master --force
+
+Sau khi đẩy được lại vào setting và deploy.
